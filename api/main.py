@@ -3,7 +3,13 @@ from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI()
+app = FastAPI(
+    title="Minha API de Investimentos",
+    description="API para calcular retorno de ações",
+    version="1.0.0",
+    docs_url="/docs",       
+    redoc_url="/redoc", 
+)
 
 class InfoPrevisao(BaseModel):
     empresa: str
