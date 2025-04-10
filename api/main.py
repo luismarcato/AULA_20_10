@@ -21,7 +21,7 @@ async def principal():
     return {"status" : True, 
             "message": "Hello World"}
 
-@app.post("/previsoes")
+@app.get("/previsoes")
 def previsoes(infoPrevisao: InfoPrevisao):
     w0, w1, w2 = [-15.3, 1.0, -3.2]
 
